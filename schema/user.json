@@ -1,18 +1,8 @@
 [
     {
-        "firstName": "John",
-        "lastName": "Doe",
-        "age": 35,
+        "firstName": "",
+        "lastName": "",
+        "age": 0,
         "id": ""
-    },
-    {
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "age": 30
-    },
-    {
-        "firstName": "Johnny",
-        "lastName": "Doe",
-        "age": 5
     }
 ]
