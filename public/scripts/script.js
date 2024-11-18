@@ -203,9 +203,6 @@ class UI {
                 })
             }
 
-
-
-
         }
 
     }
@@ -214,7 +211,7 @@ class UI {
 
 class AppService {
     static getAppName() {
-        return fetch("http://localhost:5000/api/")
+        return fetch("http://localhost:5076/api/")
             .then(response => {
                 if (response.status !== 200) {
                     console.error("[ERROR] Response status: ", response.status);
@@ -232,7 +229,7 @@ class AppService {
 
 class UserService {
     static getUsers() {
-        return fetch("http://localhost:5000/api/users/")
+        return fetch("http://localhost:5076/api/users/")
             .then(response => {
                 if (response.status !== 200) {
                     console.error("[ERROR] Response status:", response.status);
@@ -269,7 +266,7 @@ class UserService {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/users/",
+                "http://localhost:5076/api/users/",
                 {
                     method: 'POST',
                     headers: {
@@ -330,7 +327,6 @@ if(formAdd !== null) {
         addButton.disabled = true;
     })
 }
-
 
 //we are on tab Search
 if(formSearch !== null) {
