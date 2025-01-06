@@ -564,3 +564,47 @@ usersList.addEventListener('click', (event) => {
         UI.setValuesToLocalStorage(copiedUser);
     }
 })
+
+//we are on tab Edit
+if(formEdit !== null) {
+    document.addEventListener('DOMContentLoaded', () => {
+        UI.fillPlaceholders();
+        if(userIdInput.placeholder !== defaultIdPlaceholder) {
+            userIdInput.readOnly = true;
+        }
+    })
+
+    firstNameInput.addEventListener('input', () => {
+        firstNameInput.style.background = "#E8F0FE";
+        UI.activateEditButton();
+    })
+
+    lastNameInput.addEventListener('input', () => {
+        lastNameInput.style.background = "#E8F0FE";
+        UI.activateEditButton();
+    })
+
+    ageInput.addEventListener('input', () => {
+        ageInput.style.background = "#E8F0FE";
+        UI.activateEditButton();
+    })
+
+    editButton.addEventListener('click', async () => {
+        await UI.editUser();
+        UI.clearLocalStorage();
+    })
+
+}
+
+//we are on tab Delete
+if(formDelete !== null) {
+    document.addEventListener('DOMContentLoaded', () => {
+        UI.fillPlaceholders();
+        UI.activateDeleteButton();
+    })
+
+    deleteButton.addEventListener('click', async () => {
+        await UI.deleteUser();
+        UI.clearLocalStorage();
+    })
+}
