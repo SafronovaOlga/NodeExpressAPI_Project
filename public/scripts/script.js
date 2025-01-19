@@ -329,7 +329,7 @@ class UI {
 
 class AppService {
     static getAppName() {
-        return fetch("http://localhost:5076/api/")
+        return fetch("https://nodeexpressapi-project.onrender.com/api/")
             .then(response => {
                 if (response.status !== 200) {
                     console.error("[ERROR] Response status: ", response.status);
@@ -347,7 +347,10 @@ class AppService {
 
 class UserService {
     static getUsers() {
-        return fetch("http://localhost:5076/api/users/")
+
+       // return fetch("http://localhost:5076/api/users/") my app link // https://nodeexpressapi-project.onrender.com
+
+        return fetch("https://nodeexpressapi-project.onrender.com/api/users/")
             .then(response => {
                 if (response.status !== 200) {
                     console.error("[ERROR] Response status:", response.status);
@@ -384,7 +387,7 @@ class UserService {
 
         try {
             const response = await fetch(
-                "http://localhost:5076/api/users/",
+                "https://nodeexpressapi-project.onrender.com/api/users/",
                 {
                     method: 'POST',
                     headers: {
@@ -440,7 +443,7 @@ class UserService {
 
         try {
             const response = await fetch(
-                `http://localhost:5076/api/users/${user.id}`,
+                `https://nodeexpressapi-project.onrender.com/api/users/${user.id}`,
                 {
                     method: 'PATCH',
                     headers: {
@@ -479,7 +482,7 @@ class UserService {
 
         try {
             const response = await fetch(
-                `http://localhost:5076/api/users/${id}`,
+                `https://nodeexpressapi-project.onrender.com/api/users/${id}`,
                 {
                     method: 'DELETE'
                 })
